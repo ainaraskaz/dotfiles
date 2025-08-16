@@ -14,13 +14,13 @@ assign [class="kitty"] workspace 1
 assign [app_id="firefox"] workspace 2
 assign [class="Spotify"] workspace 4
 assign [class="discord"] workspace 5
-
+assign [class="idea"] workspace 3
 # Launch the programs
 exec firefox
 exec kitty
 exec flatpak run com.spotify.Client
 exec flatpak run com.discordapp.Discord
-
+exec idea
 
 ### Variables
 #
@@ -49,7 +49,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg ~/.config/wallpapers/metro_10.jpg fill
+output * bg ~/.config/wallpapers/anime.jpg fill
 #
 # Example configuration:
 #
