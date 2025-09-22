@@ -155,4 +155,6 @@ export PATH=/home/ainaras/.local/bin:$PATH
 export PATH="/home/ainaras/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/ainaras/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 export PATH=/home/ainaras/Downloads/jdk-24/bin:$PATH
+eval "$(zoxide init zsh)"
 
+bindkey -v

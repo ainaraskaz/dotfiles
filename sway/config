@@ -49,7 +49,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg ~/.config/wallpapers/anime.jpg fill
+output * bg ~/.config/wallpapers/linux.jpg stretch
 #
 # Example configuration:
 #
