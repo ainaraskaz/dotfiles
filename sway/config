@@ -15,6 +15,7 @@ assign [app_id="firefox"] workspace 2
 assign [class="Spotify"] workspace 4
 assign [class="discord"] workspace 5
 assign [class="idea"] workspace 3
+assign [class="docker desktop"] workspace 6
 # Launch the programs
 exec firefox
 exec kitty

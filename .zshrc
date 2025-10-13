@@ -158,3 +158,5 @@ export PATH=/home/ainaras/Downloads/jdk-24/bin:$PATH
 eval "$(zoxide init zsh)"
 
 bindkey -v
+GOPATH=$HOME/go  PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+eval "$(~/.local/bin/mise activate bash)"
