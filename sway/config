@@ -19,9 +19,6 @@ assign [class="Docker Desktop"] workspace 6
 # Launch the programs
 exec firefox
 exec kitty
-exec flatpak run com.spotify.Client
-exec flatpak run com.discordapp.Discord
-exec idea
 
 ### Variables
 #
