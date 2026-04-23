@@ -112,21 +112,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cat="bat"
+alias vim="nvim"
 alias nvim-my="NVIM_APPNAME=LazyVim nvim"
-
-function nvims() {
-  items=("default" "myNvim") 
-  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
-  if [[ -z $config ]]; then
-    echo "Nothing selected"
-    return 0
-  elif [[ $config == "default" ]]; then
-    config=""
-  fi
-  NVIM_APPNAME=$config nvim $@
-}
-
-
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+alias air='~/.air'
+alias update='sudo dnf update -y'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -160,3 +150,15 @@ eval "$(zoxide init zsh)"
 bindkey -v
 GOPATH=$HOME/go  PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 eval "$(~/.local/bin/mise activate bash)"
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
+export DOTNET_ROOT=/usr/lib64/dotnet
+
+
+# pnpm
+export PNPM_HOME="/home/ainaras/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

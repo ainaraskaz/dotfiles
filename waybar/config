@@ -1,0 +1,44 @@
+{
+    "layer": "top",
+    "position": "bottom", // i3bar is traditionally at the bottom
+    "height": 30,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock"],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+
+    "clock": {
+      "format": "{:%Y-%m-%d %H:%M}"
+    },
+
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "interval": 10
+    },
+
+    "memory": {
+        "format": "RAM: {used:0.1f}G",
+        "interval": 30
+    },
+
+    "network": {
+        "format-wifi": "WLAN: {essid} {signalStrength}%",
+        "format-ethernet": "ETH: Connected",
+        "format-disconnected": "Disconnected"
+    },
+
+    "pulseaudio": {
+        "format": "VOL: {volume}%",
+        "format-muted": "VOL: MUTE"
+    },
+
+    "battery": {
+        "format": "BAT: {capacity}%",
+        "format-charging": "CHR: {capacity}%"
+    }
+}
