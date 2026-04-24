@@ -10,11 +10,10 @@
 window#waybar {
     background: #000000;
     color: #ffffff;
-    /* Since the bar is at the bottom, the border should be on top to separate from windows */
     border-top: 1px solid #444444;
 }
 
-/* Updated Selectors for Niri */
+/* Individual Module Spacing */
 #workspaces button,
 #mode,
 #window,
@@ -23,24 +22,22 @@ window#waybar {
 #cpu,
 #memory,
 #battery,
-#clock,
-#tray,
-#language {
+#clock
+#tray
+#language
+{
     padding: 0 10px;
-    min-height: 20px;
 }
 
-/* Niri Workspace Buttons */
+/* The Workspace Buttons */
 #workspaces button {
     background: #222222;
     color: #ffffff;
     border-bottom: 2px solid transparent;
 }
 
-/* Niri uses "focused" or "active" depending on Waybar version, 
-   but "focused" is the standard for the current active workspace */
 #workspaces button.focused {
-    background: #285577; 
+    background: #285577; /* Classic i3 blue */
     border-bottom: 2px solid #ffffff;
 }
 
@@ -48,21 +45,20 @@ window#waybar {
     background: #900000;
 }
 
-/* Status block separators */
-#pulseaudio, #network, #cpu, #memory, #battery, #language {
-    border-left: 1px solid #444444;
+/* The "Mode" indicator (e.g., resize mode) */
+#mode {
+    background: #900000;
+    color: white;
 }
 
+/* Status block separators mimic */
+#pulseaudio, #network, #cpu, #memory, #battery {
+    border-left: 1px solid #444444;
+}
 #tray {
     background-color: #000000;
-    margin-left: 10px;
-    margin-right: 10px;
-    min-width: 16px;
 }
-#tray menu {
-    background: #222222;
-    color: #ffffff;
-}
+
 #tray > .passive {
     -gtk-icon-effect: dim;
 }

@@ -1,29 +1,25 @@
 {
     "layer": "top",
-    "position": "bottom",
+    "position": "bottom", // i3bar is traditionally at the bottom
     "height": 30,
-    // Note: Use "niri/workspaces" and "niri/window" for Niri-specific info
-    "modules-left": ["niri/workspaces",  "tray"],
+    "modules-left": ["sway/workspaces", "sway/mode", "tray"],
     "modules-center": [],
-    "modules-right": ["niri/language", "pulseaudio", "network", "cpu", "memory", "battery", "clock"],
+    "modules-right": ["sway/language","pulseaudio", "network", "cpu", "memory", "battery", "clock"],
 
-    "niri/workspaces": {
-        "format": "{index}",
-        "all-outputs": true
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
     },
-
-    "niri/language": {
-        "format": "{short}",
-        "hide-single-layout": true
-    },
-
     "tray": {
-        "icon-size": 16,
-        "spacing": 10,
+      "icon-size": 16,
+      "spacing": 10
     },
-
+    "sway/language":{
+      "format" : "{short}"
+    },
     "clock": {
-        "format": "{:%Y-%m-%d %H:%M}"
+      "format": "{:%Y-%m-%d %H:%M}"
     },
 
     "cpu": {
@@ -45,7 +41,7 @@
     "pulseaudio": {
         "format": "VOL: {volume}%",
         "format-muted": "VOL: MUTE",
-        "on-click": "pavucontrol"
+        "on-click" : "pavucontrol"
     },
 
     "battery": {
