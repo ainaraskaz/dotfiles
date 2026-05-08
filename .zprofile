@@ -3,8 +3,6 @@ if [[ -z $DISPLAY ]]; then
         export XDG_CURRENT_DESKTOP=SWAY
         exec sway
     elif [[ $(tty) == /dev/tty2 ]]; then
-        export XDG_CURRENT_DESKTOP=niri
-        export XDG_SESSION_TYPE=wayland
-        exec niri
+        exec niri-session -l
     fi
 fi
